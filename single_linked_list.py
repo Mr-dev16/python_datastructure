@@ -57,13 +57,3 @@ class Single_Linked_List:
 
 
 
-sll = Single_Linked_List()
-
-sll.Prepend('A')
-sll.Prepend('B')
-sll.Prepend('C')
-sll.Prepend('D')
-
-sll.Shift()
-
-print(sll)
