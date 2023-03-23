@@ -54,6 +54,40 @@ class Single_Linked_List:
             self.size -= 1
             return node_delete.value
 
+    def Pop(self):
+        #function delete ultima element linked list 
+        if self.size == 0:
+            self.head = None
+            self.body = None
+        else:
+            node_now = self.head
+            new_body = node_now
+            while node_now.node_next != None:
+                new_body = node_now
+                node_now = node_now.node_next
+            self.body = new_body
+            self.body.node_next=None
+            self.size -= 1
+            return print(node_now.value)
+    
+
+    def Get(self, index):
+        #get value of the node with you input index
+        if index == self.size - 1:
+            return self.body
+        elif index == 0:
+            return self.head
+        elif not index > 0 or  index < self.size - 1 :
+            node_now  = self.head
+            counter = 0
+            while counter != index:
+                node_now = node_now.node_next
+                counter += 1
+            return node_now
+        else:
+            return None
+
+
 
 
 
